@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+html {
+	@media (prefers-color-scheme: dark) {
+		background-color: rgb(3, 7, 18); /* gray-950 */
+		color-scheme: dark;
+	}
+	background-color: white;
+}
+
 body {
 	@apply bg-white dark:bg-gray-950;
 

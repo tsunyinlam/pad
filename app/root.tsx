@@ -26,20 +26,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
 			<head>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-              (function() {
-                let theme = localStorage.getItem("theme");
-                if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-                  document.documentElement.classList.add("dark");
-                }
-              })();
-            `,
-					}}
-				/>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="color-scheme" content="light dark" />
 				<Meta />
 				<Links />
 			</head>
@@ -51,7 +40,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 		</html>
 	);
 }
-
 
 export default function App() {
 	return <Outlet />;
