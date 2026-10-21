@@ -1,9 +1,7 @@
 import { redirect } from "@remix-run/react";
-import { nanoid } from "nanoid";
 
 export const loader = () => {
-	const id = nanoid();
-	return redirect(`/${id}`);
+	return redirect("/0");
 };
 
 export default function Index() {
